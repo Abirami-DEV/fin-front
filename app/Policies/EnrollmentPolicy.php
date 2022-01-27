@@ -24,4 +24,9 @@ class EnrollmentPolicy
     {
         return $enrollment->status==='Active';
     }
+    public function closed(User $user, $enrollment)
+    {
+        return $enrollment->status==='Inactive';
+    }
+
 }
